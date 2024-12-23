@@ -1,8 +1,8 @@
 services:
     - type: web
       runtime: node
-      name: jeweler-assistant
-      repo: https://github.com/pkhalladin/jeweler-assistant
+      name: jeweler-assistant-client
+      repo: https://github.com/pkhalladin/jeweler-assistant-client
       plan: free
       buildCommand: npm install
       startCommand: npm start
