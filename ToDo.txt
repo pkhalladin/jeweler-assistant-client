@@ -1,0 +1,20 @@
+Category
+    Id
+    Name
+    Description
+    Photos[]
+
+ItemDescriptor
+    Id
+    Category
+    Name
+    Description
+    DefaultPrice
+    Photos[]
+
+Item
+    Id
+    ItemDescriptor
+    Price
+    Notes
+    Photos[]
