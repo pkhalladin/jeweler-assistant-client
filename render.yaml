@@ -5,4 +5,4 @@ services:
       repo: https://github.com/pkhalladin/jeweler-assistant-client
       plan: free
       buildCommand: npm install
-      startCommand: npm start
+      startCommand: npm run start-render
