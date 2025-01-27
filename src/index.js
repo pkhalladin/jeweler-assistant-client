@@ -13,7 +13,7 @@ async function main()
     const response = await api.get("/ping");
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<h1>{response}</h1>);
+    root.render(<h1>{response.message}</h1>);
 }
 
 main();
