@@ -1,19 +1,23 @@
 import ReactDOM from 'react-dom/client';
 import RestApiClient from './utils/RestApiClient';
+import ApplicationComponent from './components/ApplicationComponent';
+import "./index.css";
+
+export let api = null;
 
 async function main()
 {
-    let api = new RestApiClient('http://localhost:3001');
-
     if (process.env.REACT_APP_MODE === "render")
     {
         api = new RestApiClient('https://jeweler-assistant-server.onrender.com');
     }
-
-    const response = await api.get("/ping");
+    else
+    {
+        api = new RestApiClient('http://localhost:3001');
+    }
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<h1>{response.message}</h1>);
+    root.render(<ApplicationComponent />);
 }
 
 main();

@@ -1,11 +1,14 @@
-export default class Category
-{
-    // TODO: czy chcemy ustawiać id?
-    constructor(id, name, description, photos)
-    {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.photos = photos;
-    }    
+export default class Category {
+    static createWithId(id, name, description) {
+        const category = this.createWithoutId(name, description);
+        category.id = id;
+        return category;
+    }
+
+    static createWithoutId(name, description) {
+        const category = new Category();
+        category.name = name;
+        category.description = description;
+        return category;
+    }
 }
